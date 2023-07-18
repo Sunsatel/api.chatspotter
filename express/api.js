@@ -9,7 +9,8 @@ const Stripe = require("stripe");
 const axios = require("axios");
 //import supabase from './src/components/supabaseClient'
 const { createClient } = require("@supabase/supabase-js");
-const stripe = Stripe("sk_test_61vDJj4xyA40vE0TdTFg5lQe00840D9EzQ"); //Stripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+// const stripe = Stripe("sk_test_61vDJj4xyA40vE0TdTFg5lQe00840D9EzQ"); //Stripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
+const stripe = Stripe(process.env.VITE_STRIPE_PUBLIC_KEY); //Stripe(import.meta.env.VITE_STRIPE_PUBLIC_KEY);
 const app = express();
 
 // Replace the placeholders with your own Supabase credentials
