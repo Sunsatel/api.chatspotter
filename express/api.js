@@ -16,7 +16,7 @@ const app = express();
 // Replace the placeholders with your own Supabase credentials
 const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
 const SUPABASE_KEY = process.env.VITE_SUPABASE_ANON_KEY;
-const GOOGLE_API = "AIzaSyDgt9I--BmAa2x0PtTnvSh-rvwuS5-XrEY";
+const GOOGLE_API = process.env.VITE_GOOGLE_API_KEY;
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
   auth: {
