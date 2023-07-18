@@ -70,9 +70,9 @@ a88aaaa    88     88 88     88 88           88    88 88     88 88     88 `Y88888
 
 // Define a route that responds with a JSON object when a GET request is made to the root path
 router.get("/", (req, res) => {
-  res.json({
-    hello: "hi!",
-  });
+  res.writeHead(200, { "Content-Type": "text/html" });
+  res.write("<h1>Hello from Express.js!</h1>");
+  res.end();
 });
 
 async function getTimezoneFromPostalCode(postalCode) {
