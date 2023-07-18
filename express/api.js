@@ -14,9 +14,8 @@ const stripe = Stripe(process.env.VITE_STRIPE_PUBLIC_KEY); //Stripe(import.meta.
 const app = express();
 
 // Replace the placeholders with your own Supabase credentials
-const SUPABASE_URL = "https://yrgsveuvexfhoprjcjvq.supabase.co";
-const SUPABASE_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlyZ3N2ZXV2ZXhmaG9wcmpjanZxIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzc5ODAxMjksImV4cCI6MTk5MzU1NjEyOX0.xSOJxnh1tuLfUVaT2n4Gcl6jSqf3kmBzOrP39qD1xvk";
+const SUPABASE_URL = process.env.VITE_SUPABASE_URL;
+const SUPABASE_KEY = process.env.VITE_SUPABASE_ANON_KEY;
 const GOOGLE_API = "AIzaSyDgt9I--BmAa2x0PtTnvSh-rvwuS5-XrEY";
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY, {
