@@ -48,7 +48,7 @@ app.use(
 );
 app.use(cookieParser());
 // Use the router to handle requests to the `/.netlify/functions/server` path
-app.use(`/.netlify/functions/server`, router);
+app.use(`/.netlify/functions/api`, router);
 
 const YOUR_DOMAIN_BILLING = "http://localhost:3001/billing";
 // the below succes page is on the server so

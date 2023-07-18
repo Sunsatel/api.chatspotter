@@ -8,4 +8,4 @@
 
 [[redirects]]
   from="/stripe/*"
-  to="/.netlify/functions/server/stripe/:splat"
+  to="/.netlify/functions/api/stripe/:splat"
