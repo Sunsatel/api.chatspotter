@@ -50,7 +50,10 @@ app.use(cookieParser());
 // Use the router to handle requests to the `/.netlify/functions/server` path
 app.use(`/.netlify/functions/api`, router);
 app.use("/", (req, res) =>
-  res.sendFile(path.join(__dirname, "../src/index.html"))
+  // res.sendFile(path.join(__dirname, "../src/index.html"))
+  res.json({
+    hello: "hi!",
+  })
 );
 
 const YOUR_DOMAIN_BILLING = "http://localhost:3001/billing";
