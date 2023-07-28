@@ -8,8 +8,4 @@ const app = express();
 app.use('/.netlify/functions/web', webhookRoute);
 app.use('/.netlify/functions/api', endpointRoutes);
 
-// app.listen(4000, () => {
-//   console.log('Server listening on port 4000!');
-// });
-
 export const handler = serverless(app);
