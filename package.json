@@ -24,7 +24,7 @@
     "express-session": "^1.17.3",
     "netlify-cli": "^15.9.1",
     "netlify-lambda": "^2.0.16",
-    "node-fetch": "^3.3.2",
+    "node-fetch": "^2.6.1",
     "serverless-http": "^3.2.0",
     "stripe": "^12.16.0"
   }
