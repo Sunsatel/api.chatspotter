@@ -3,5 +3,21 @@
   functions = "functions"
 
 [[redirects]]
+  from = "/web/*"
+  to = "/.netlify/functions/web/stripe/:splat"
+
+[[redirects]]
+  from = "/api/*"
+  to = "/api/:splat"
+
+[[redirects]]
   from="/stripe/*"
   to="/.netlify/functions/api/stripe/:splat"
+
+[[redirects]]
+  from="/"
+  to="/.netlify/functions/api/"
+
+[[redirects]]
+  from="/*"
+  to="/:splat"
