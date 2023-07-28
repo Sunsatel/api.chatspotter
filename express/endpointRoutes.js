@@ -28,6 +28,10 @@ router.use(cors({
 const YOUR_DOMAIN_BILLING = 'http://localhost:3000/billing';
 
 
+router.get('/', async (req, res) => {
+  res.status(200).json({msg: "Hello world!"});
+})
+
 router.post('/api/chat', cors(), async (req, res) => {
 
   let chat = req.body
