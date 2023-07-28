@@ -5,7 +5,7 @@ import endpointRoutes from './endpointRoutes.js';
 
 const app = express();
 
-app.use('/web', webhookRoute);
+app.use('/.netlify/functions/web', webhookRoute);
 app.use('/.netlify/functions/api', endpointRoutes);
 
 // app.listen(4000, () => {

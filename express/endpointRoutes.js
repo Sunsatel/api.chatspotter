@@ -32,7 +32,7 @@ router.get('/', async (req, res) => {
   res.status(200).json({msg: "Hello world!"});
 })
 
-router.post('/api/chat', cors(), async (req, res) => {
+router.post('/chat', cors(), async (req, res) => {
 
   let chat = req.body
   console.log('server req.body', chat)
@@ -53,7 +53,7 @@ router.post('/api/chat', cors(), async (req, res) => {
 });
 
 
-router.post('/api/grammar', cors(), async (req, res) => {
+router.post('/grammar', cors(), async (req, res) => {
 
    let text = req.body.text
    console.log('Text to check: ', text)
@@ -101,7 +101,7 @@ Y88b  d88P   888    888  T88b   888  888       888
 `88888P' dP    dP `88888P' `88888P' dP   `YP `88888P' `88888P'   dP
 
  */
- router.post('/api/stripe/create-checkout-session', cors(), async (req, res) => {
+ router.post('/stripe/create-checkout-session', cors(), async (req, res) => {
   const prices = await stripe.prices.list({
     lookup_keys: [req.body.lookup_key],
     expand: ['data.product'],
@@ -139,7 +139,7 @@ Y88b  d88P   888    888  T88b   888  888       888
 dP
 */
 
-router.post('/api/stripe/create-portal-session', cors(), async (req, res) => {
+router.post('/stripe/create-portal-session', cors(), async (req, res) => {
   console.log('in create-portal-session: ',req.body.customer_id);
   const session = await stripe.billingPortal.sessions.create({
     customer: req.body.customer_id,

@@ -8,16 +8,12 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "/api/:splat"
+  to = "/.netlify/functions/api/:splat"
 
 [[redirects]]
   from="/stripe/*"
-  to="/.netlify/functions/api/stripe/:splat"
+  to = "/.netlify/functions/api/stripe/:splat"
 
 [[redirects]]
   from="/"
   to="/.netlify/functions/api/"
-
-[[redirects]]
-  from="/*"
-  to="/:splat"
